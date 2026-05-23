@@ -8,7 +8,7 @@
  * Requires BUFFER_TOKEN in .env
  */
 import 'dotenv/config';
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -41,11 +41,6 @@ async function bufferRequest(endpoint, method = 'GET', body = null) {
   return res.json();
 }
 
-async function getProfiles() {
-  const data = await bufferRequest('profiles.json');
-  return data;
-}
-
 async function postToBuffer(text, profileIds, scheduleAt = null) {
   const body = {
     text,
@@ -59,19 +54,11 @@ async function postToBuffer(text, profileIds, scheduleAt = null) {
 // ── QUEUE MANAGEMENT ──────────────────────────────────────────────────────────
 
 function loadQueue() {
-  if (!existsSync(QUEUE_FILE)) return [];
-  return JSON.parse(readFileSync(QUEUE_FILE, 'utf8'));
-}
-
-function saveQueue(queue) {
-  writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2));
-}
-
-function addToQueue(post) {
-  const queue = loadQueue();
-  queue.push({ ...post, id: Date.now(), added: new Date().toISOString() });
-  saveQueue(queue);
-  console.log(`\n✓ Added to queue. Queue length: ${queue.length}`);
+  try {
+    return JSON.parse(readFileSync(QUEUE_FILE, 'utf8'));
+  } catch {
+    return [];
+  }
 }
 
 function showQueue() {
@@ -103,7 +90,7 @@ async function sendPost(text, platforms, scheduleAt = null) {
   }
 
   console.log(`\nPosting to: ${Object.keys(platforms).filter(k => platforms[k]).join(', ')}`);
-  console.log(`Text: ${text.substring(0, 60)}...`);
+  console.log(`Text: ${text.substring(0, 60)}${text.length > 60 ? '...' : ''}`);
 
   const result = await postToBuffer(text, profileIds, scheduleAt);
   console.log('\n✓ Posted successfully!');
@@ -212,8 +199,9 @@ Shadow of Things to Come: Sacred Patterns, Priestly Types, and Prophetic Figures
 
 function getTodaysPost() {
   const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
-  const today = days[new Date().getDay()];
-  const weekOfMonth = Math.ceil(new Date().getDate() / 7);
+  const now = new Date();
+  const today = days[now.getDay()];
+  const weekOfMonth = Math.floor((now.getDate() - 1) / 7) + 1;
   const week = ((weekOfMonth - 1) % 3) + 1; // cycles weeks 1-2-3 forever
   return CONTENT_CALENDAR.find(p => p.week === week && p.day === today) || null;
 }
@@ -223,8 +211,7 @@ function getTodaysPost() {
 const args = process.argv.slice(2);
 
 if (args.includes('--setup')) {
-  // Print profile IDs so user can add them to .env
-  getProfiles().then(profiles => {
+  bufferRequest('profiles.json').then(profiles => {
     console.log('\n── Your Buffer Profiles ─────────────────────────────');
     profiles.forEach(p => {
       console.log(`  ${p.service.padEnd(12)} ${p.id}  @${p.service_username}`);
