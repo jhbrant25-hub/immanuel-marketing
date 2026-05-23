@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "post-today": "node post.js --schedule",
-    "setup-buffer": "node post.js --setup",
-    "queue": "node post.js --queue"
+    "preview": "node post.js --preview"
   },
   "dependencies": {
     "dotenv": "^16.6.1"
