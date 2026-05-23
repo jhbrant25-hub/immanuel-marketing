@@ -252,12 +252,20 @@
 
 <!-- ── NAVIGATION ──────────────────────────────────────────────────────────── -->
 <nav>
-  <a href="#top" class="nav-logo">Immanuel Men</a>
+  <a href="#top" class="nav-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 54" height="38" aria-label="Immanuel Men Ministry">
+      <rect x="159" y="4" width="2" height="18" fill="#c9a233"/>
+      <rect x="153" y="11" width="14" height="2" fill="#c9a233"/>
+      <text x="160" y="38" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="22" font-weight="700" fill="#c9a233" letter-spacing="5">IMMANUEL</text>
+      <text x="160" y="52" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="9" fill="#f0e6cc" letter-spacing="5">MEN MINISTRY</text>
+    </svg>
+  </a>
   <ul class="nav-links">
     <li><a href="#series">The Series</a></li>
     <li><a href="#books">All Books</a></li>
     <li><a href="#beyond">More Titles</a></li>
     <li><a href="#author">Author</a></li>
+    <li><a href="#signup">Stay Connected</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -514,6 +522,40 @@
       </div>
 
     </div>
+  </div>
+</div>
+
+<!-- ── EMAIL SIGNUP ──────────────────────────────────────────────────────────── -->
+<div id="signup" style="background:#100c06; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:5rem 2rem;">
+  <div style="max-width:600px; margin:0 auto; text-align:center;">
+    <p class="eyebrow">Stay Connected</p>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);">Be the first to know<br>when new books drop.</h2>
+    <div class="divider" style="margin:1.25rem auto;"></div>
+    <p style="color:var(--text); margin-bottom:2rem; font-size:1.05rem;">
+      New releases, men&rsquo;s group resources, and formation content &mdash; straight to your inbox.
+      No noise. No spam. Just the field notes.
+    </p>
+    <!-- Formspree: replace YOUR_FORM_ID once set up at formspree.io -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+          style="display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
+      <input type="email" name="email" placeholder="Your email address" required
+             style="flex:1; min-width:240px; padding:0.75rem 1rem; background:#1a1008;
+                    border:1px solid var(--border); color:var(--parchment);
+                    font-family:var(--serif); font-size:1rem; outline:none;">
+      <input type="hidden" name="_subject" value="New subscriber — Immanuel Men Ministry">
+      <button type="submit"
+              style="background:var(--gold); color:#080604; padding:0.75rem 2rem;
+                     font-family:var(--display); font-size:0.8rem; font-weight:700;
+                     letter-spacing:0.1em; border:none; cursor:pointer;
+                     transition:background 0.2s;"
+              onmouseover="this.style.background='#e8c96a'"
+              onmouseout="this.style.background='#c9a233'">
+        Subscribe
+      </button>
+    </form>
+    <p style="margin-top:1rem; font-size:0.82rem; color:var(--muted);">
+      Unsubscribe any time. Your information is never shared.
+    </p>
   </div>
 </div>
 

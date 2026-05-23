@@ -1,0 +1,14 @@
+{
+  "name": "immanuel-marketing",
+  "version": "1.0.0",
+  "description": "Immanuel Men Ministry — Book Marketing Site & Social Media Tools",
+  "type": "module",
+  "scripts": {
+    "post-today": "node post.js --schedule",
+    "setup-buffer": "node post.js --setup",
+    "queue": "node post.js --queue"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1"
+  }
+}

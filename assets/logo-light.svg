@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" width="560" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=EB+Garamond:ital@1&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="560" height="200" fill="#f5edd6"/>
+
+  <!-- Cross -->
+  <rect x="279" y="18" width="2" height="36" fill="#8b6914"/>
+  <rect x="269" y="30" width="22" height="2" fill="#8b6914"/>
+
+  <!-- IMMANUEL -->
+  <text x="280" y="100"
+    text-anchor="middle"
+    font-family="Cinzel, 'Palatino Linotype', Georgia, serif"
+    font-size="48"
+    font-weight="700"
+    fill="#1a0e06"
+    letter-spacing="10">IMMANUEL</text>
+
+  <!-- MEN MINISTRY -->
+  <text x="280" y="132"
+    text-anchor="middle"
+    font-family="Cinzel, 'Palatino Linotype', Georgia, serif"
+    font-size="16"
+    font-weight="400"
+    fill="#5a3a14"
+    letter-spacing="9">MEN MINISTRY</text>
+
+  <!-- Gold rule -->
+  <rect x="140" y="147" width="280" height="1" fill="#8b6914" opacity="0.6"/>
+
+  <!-- Tagline -->
+  <text x="280" y="170"
+    text-anchor="middle"
+    font-family="'EB Garamond', 'Palatino Linotype', Georgia, serif"
+    font-size="13"
+    font-style="italic"
+    fill="#8b6914"
+    letter-spacing="1">We choose to love Jesus — as He loves us.</text>
+</svg>

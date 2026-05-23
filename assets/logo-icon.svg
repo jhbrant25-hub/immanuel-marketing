@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;display=swap');
+    </style>
+    <!-- Shield clip path -->
+    <clipPath id="shield-clip">
+      <path d="M100,185 L22,140 L22,42 Q22,30 34,30 L166,30 Q178,30 178,42 L178,140 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer background -->
+  <rect width="200" height="200" fill="#0c0806"/>
+
+  <!-- Shield fill -->
+  <path d="M100,185 L22,140 L22,42 Q22,30 34,30 L166,30 Q178,30 178,42 L178,140 Z"
+    fill="#1a0e06"/>
+
+  <!-- Shield border -->
+  <path d="M100,185 L22,140 L22,42 Q22,30 34,30 L166,30 Q178,30 178,42 L178,140 Z"
+    fill="none"
+    stroke="#c9a233"
+    stroke-width="2.5"/>
+
+  <!-- Inner shield line -->
+  <path d="M100,174 L30,133 L30,50 Q30,38 42,38 L158,38 Q170,38 170,50 L170,133 Z"
+    fill="none"
+    stroke="#c9a233"
+    stroke-width="0.8"
+    opacity="0.4"/>
+
+  <!-- Cross -->
+  <rect x="99" y="52" width="2" height="26" fill="#c9a233"/>
+  <rect x="90" y="62" width="20" height="2" fill="#c9a233"/>
+
+  <!-- IM monogram -->
+  <text x="100" y="122"
+    text-anchor="middle"
+    font-family="Cinzel, 'Palatino Linotype', Georgia, serif"
+    font-size="46"
+    font-weight="700"
+    fill="#c9a233"
+    letter-spacing="4">IM</text>
+
+  <!-- IMMANUEL MEN bottom text -->
+  <text x="100" y="148"
+    text-anchor="middle"
+    font-family="Cinzel, 'Palatino Linotype', Georgia, serif"
+    font-size="9"
+    font-weight="400"
+    fill="#f0e6cc"
+    letter-spacing="3">IMMANUEL MEN</text>
+</svg>
