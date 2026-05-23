@@ -273,6 +273,44 @@
     footer a { color: var(--gold); text-decoration: none; }
     footer p + p { margin-top: 0.5rem; }
 
+    /* ── PROLOGUE EXCERPT ────────────────────────── */
+    .book-excerpt {
+      margin-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+    .book-excerpt summary {
+      font-family: var(--display); font-size: 0.68rem;
+      letter-spacing: 0.14em; color: var(--gold);
+      cursor: pointer; padding: 0.7rem 0;
+      list-style: none; user-select: none;
+    }
+    .book-excerpt summary::-webkit-details-marker { display: none; }
+    .book-excerpt summary::after { content: ' \2193'; }
+    .book-excerpt[open] summary::after { content: ' \2191'; }
+    .excerpt-body {
+      font-size: 0.88rem; line-height: 1.82;
+      color: var(--text); padding-bottom: 0.5rem;
+      max-height: 420px; overflow-y: auto;
+      border-left: 2px solid var(--border); padding-left: 1rem;
+    }
+    .excerpt-body p { margin-bottom: 0.9rem; }
+    .excerpt-body p:last-child { margin-bottom: 0; }
+    .excerpt-eyebrow {
+      font-family: var(--display); font-size: 0.65rem;
+      letter-spacing: 0.16em; color: var(--gold);
+      text-transform: uppercase; margin-bottom: 0.75rem;
+    }
+    .excerpt-body em { color: var(--gold-lt); }
+    .excerpt-body blockquote {
+      border-left: 2px solid var(--gold); margin: 0.75rem 0;
+      padding-left: 0.75rem; font-style: italic; color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .excerpt-divider {
+      text-align: center; color: var(--gold);
+      margin: 0.75rem 0; font-size: 0.85rem;
+    }
+
     /* ── RESPONSIVE ──────────────────────────── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -378,7 +416,6 @@
 
       <!-- Book 1 -->
       <div class="book-card">
-        <img src="assets/cover-sin-of-fear.png" alt="The Sin of Fear" class="book-cover-img">
         <p class="book-num">Book 1 of 4 &nbsp;&bull;&nbsp; Field Manual Series</p>
         <h3 class="book-title">The Sin of Fear</h3>
         <p class="book-subtitle">A Field Manual for the Unclenched Heart</p>
@@ -394,6 +431,19 @@
           <a href="https://www.amazon.com/dp/B0GWV5HMYG" target="_blank" class="btn-buy">Paperback</a>
           <a href="https://www.amazon.com/dp/B0GWV5HMYG" target="_blank" class="btn-format">Kindle</a>
         </div>
+        <details class="book-excerpt">
+          <summary>Read the Preface</summary>
+          <div class="excerpt-body">
+            <p class="excerpt-eyebrow">The Awakening of the Warrior-Priest</p>
+            <p>If you have already walked through the pages of <em>The Sin of Worry</em>, you understand the exhaustion of the &ldquo;clenched hand.&rdquo; You know the soul-deep fatigue that comes from carrying a world you were never meant to sustain. You have identified the &ldquo;Sin of Worry&rdquo; as a tactical diagnosis &mdash; a functional declaration that God is absent and you are the sole provider, protector, and priest of your own existence.</p>
+            <p>But as you stand on the wall, you have realized that beneath the &ldquo;clenched hand&rdquo; lies a deeper, more aggressive shadow. It is the Sin of Fear.</p>
+            <p>While worry fractures the mind, fear paralyzes the man. It is the &ldquo;Anatomy of Paralysis&rdquo; that keeps a man in the &ldquo;Cave&rdquo; &mdash; too terrified to look for a new job because he might fail, too fearful to lead his family because he feels like a fraud, and too &ldquo;clenched&rdquo; to defend his faith because he doesn&rsquo;t feel &ldquo;holy enough.&rdquo;</p>
+            <p>This manual is not here to give you &ldquo;Sunday School&rdquo; answers. It is here to reveal the Unseen War and to form you into the man God intended you to be: a Warrior-Priest who is assertive, aggressive for the Kingdom, and grounded in the Immanuel Reality.</p>
+            <p>To be an Immanuel Man is to move from a &ldquo;Passive Survivor&rdquo; to an &ldquo;Active Sentinel.&rdquo; It is to recognize that your fear of &ldquo;not succeeding&rdquo; is a snare designed to keep you from your Mandate.</p>
+            <p>The storm is still raging, but the man is now the Anchor. It is time to jump into the fight &mdash; for your family, for your faith, and for your Father.</p>
+            <p>Welcome to the Watch. Unclench the heart. Take your post.</p>
+          </div>
+        </details>
       </div>
 
       <!-- Book 2 -->
@@ -414,6 +464,18 @@
           <a href="https://www.amazon.com/dp/B0GWV6NJLP" target="_blank" class="btn-buy">Paperback</a>
           <a href="https://www.amazon.com/dp/B0GWV6NJLP" target="_blank" class="btn-format">Kindle</a>
         </div>
+        <details class="book-excerpt">
+          <summary>Read the Preface</summary>
+          <div class="excerpt-body">
+            <p class="excerpt-eyebrow">The Crisis of the Clenched Hand</p>
+            <p>You are likely exhausted. Not the kind of exhausted that a Sunday nap or a long weekend can fix, but a soul-deep fatigue born of carrying a world you were never meant to sustain. You are the man who wakes at 0300 with a knot in his stomach, mentally rehearsing conversations that have not happened yet, solving problems that have not arrived, and bracing for a collapse that feels inevitable.</p>
+            <p>We call this the Sin of Worry.</p>
+            <p>We do not use the word &ldquo;Sin&rdquo; to add more weight to your shoulders or to shame you in the trenches. We use it as a tactical diagnosis. In the modern church, worry is often treated as a &ldquo;personality quirk&rdquo; or an unavoidable byproduct of a high-stakes life. But in the Kingdom, worry is a Breach. It is a functional declaration that God is absent, and that you are the sole provider, protector, and priest of your own existence.</p>
+            <p>Worry is the Clenched Hand. It is the physical, mental, and spiritual refusal to release control &mdash; the white-knuckle grip on the steering wheel of a life moving too fast. This manual is your field guide to unclenching that hand.</p>
+            <p>The goal of this manual is not merely to help you &ldquo;calm down.&rdquo; It is to help you become an Immanuel Man &mdash; a man who knows, deep in his marrow, that God is with him. The name <em>Immanuel</em> means &ldquo;God with us&rdquo; &mdash; and when Matthew applies it to Jesus, he is not offering comfort poetry. He is making a cosmic announcement: the Son of God has permanently entered the space between the storm and the man.</p>
+            <p>The Breach is open. The Storm is here. It is time to take your post. Welcome to the Watch.</p>
+          </div>
+        </details>
       </div>
 
       <!-- Book 3 -->
@@ -434,6 +496,20 @@
           <a href="https://www.amazon.com/dp/B0GYL6FWM7" target="_blank" class="btn-buy">Paperback</a>
           <a href="https://www.amazon.com/dp/B0GYL6FWM7" target="_blank" class="btn-format">Kindle</a>
         </div>
+        <details class="book-excerpt">
+          <summary>Read the Foreword</summary>
+          <div class="excerpt-body">
+            <p class="excerpt-eyebrow">By John Brantley, Founder &mdash; Immanuel Men Ministry</p>
+            <p>I almost did not write this book.</p>
+            <p>Not because I lacked material. After more than a decade of building theological curriculum for men &mdash; studying the Church Fathers, the Desert Fathers, the Hebrew text, the Greek text, the Second Temple literature that most churches have never heard of &mdash; I had more material than I could ever fit in one volume. The problem was something else. The problem was that I was not sure I had earned the right to say what this book says.</p>
+            <p>I had spent years watching Christian men shrink. I had watched good men go quiet in boardrooms, at dinner tables, on job sites, in marriages &mdash; good men who believed what they said they believed but had absorbed the cultural message that their belief was private property, not public light. I had felt the pull myself. The pull to be reasonable. Measured. Inoffensive. To tone it down.</p>
+            <p>Then my heart valve failed.</p>
+            <p>I do not use that sentence for dramatic effect. It is simply what happened. The scans were clear. The doctors were direct. And in a hospital room, stripped of every pretense of strength, I watched God&rsquo;s angels show up &mdash; nurses, physicians, an EMT team &mdash; and exercise dominion over the chaos that was trying to kill me. I watched what it looked like when men and women refused to hide what they had been given. They worked with everything they had. They prayed. They stayed.</p>
+            <p>I survived. And when I came out of that operating room, I knew two things with a certainty that has not left me since. First: God is not finished with me. Second: I do not have the luxury of staying quiet about what I know.</p>
+            <p>This book is the result of that conviction. I have written it for the man who is tired of hiding &mdash; tired of apologizing for his faith, his masculinity, his leadership, his strength. I have written it for the man who knows he was made for more than the culture is offering him.</p>
+            <p>Take this book seriously, because the hour is serious.</p>
+          </div>
+        </details>
       </div>
 
       <!-- Book 4 -->
@@ -453,6 +529,18 @@
           <a href="https://www.amazon.com/dp/B0H2PNFR8R" target="_blank" class="btn-buy">Paperback</a>
           <a href="https://www.amazon.com/dp/B0GX2VLV59" target="_blank" class="btn-format">Kindle</a>
         </div>
+        <details class="book-excerpt">
+          <summary>Read the Foreword</summary>
+          <div class="excerpt-body">
+            <p>There is a confession I need to make before you read a single chapter of this book.</p>
+            <p>I wrote it as a man who has been Ethan, Marcus, Victor, Samuel, Robert, and Jamal &mdash; sometimes all six in the same week. I have checked the email at 11 p.m. from the parking lot. I have drafted the succession plan that was more about control than stewardship. I have scanned the room for threats that God had already handled. I have told myself that my vigilance was faithfulness when it was, beneath the surface, the ancient whisper: <em>if I do not hold this together, it falls apart.</em></p>
+            <p>I did not recognize the sin of control by reading about it. I recognized it in my body &mdash; the locked jaw, the tight shoulders, the low-grade hum of surveillance that never fully stopped. And I recognized it, finally, in a Hebrew imperative from Psalm 46 that I had read dozens of times without hearing it as a command addressed to me personally.</p>
+            <p><em>&#x05D4;&#x05B7;&#x05E8;&#x05E4;&#x05BC;&#x05D5;&#x05BC; (Har-p&#363;). Cause yourselves to release.</em> The Hiphil imperative, masculine plural &mdash; addressed to a community of men, commanding a deliberate act of the will. Not: try to relax. Not: you should probably worry less. But: <em>cause yourself, right now, to open the fist.</em></p>
+            <p>This volume names the root of both worry and fear: the attempt to manage the world so that neither will have anything to work with. That attempt is, of course, impossible. The cosmos has a Sovereign, and it is not you or me.</p>
+            <p>What it produces, in a word, is the man God designed: free, strong, and still. Not passive. Not resigned. But the warrior whose strength is borrowed from the One who does not tire, whose stillness is the fruit of trust rather than the exhaustion of striving.</p>
+            <p><em>Harpu. The King is on the throne. You can open your hands.</em></p>
+          </div>
+        </details>
       </div>
 
     </div>
@@ -476,7 +564,7 @@
     <div class="books-grid">
 
       <div class="book-card">
-        <img src="assets/cover-eyes-on-the-horizon.png" alt="Eyes on the Horizon" class="book-cover-img" style="object-position: right top;">
+        <img src="assets/cover-eyes-on-the-horizon.jpg" alt="Eyes on the Horizon" class="book-cover-img">
         <p class="book-num">Spirit, Soul &amp; Body Series</p>
         <h3 class="book-title">Eyes on the Horizon</h3>
         <p class="book-subtitle">Strategic Spirit and Soul with Tactical Body</p>
@@ -491,6 +579,22 @@
           <a href="https://www.amazon.com/dp/B0H2Q6SRVH" target="_blank" class="btn-buy">Paperback</a>
           <a href="https://www.amazon.com/dp/B0H2NQ6CFY" target="_blank" class="btn-format">Kindle</a>
         </div>
+        <details class="book-excerpt">
+          <summary>Read the Prologue</summary>
+          <div class="excerpt-body">
+            <p class="excerpt-eyebrow">The Representative&rsquo;s Gaze</p>
+            <blockquote>&ldquo;&hellip;looking unto Jesus, the author and finisher of our faith, who for the joy that was set before Him endured the cross, despising the shame, and has sat down at the right hand of the throne of God.&rdquo; &mdash; Hebrews 12:2</blockquote>
+            <p>JULY 1971. He is eight years old, lying on his back in the bed of his grandfather&rsquo;s pickup truck. The truck is parked on a patch of Georgia red clay that has baked all day in the Southern sun, but now, at 10:00 PM, the metal of the truck bed is beginning to pull the heat away from his spine. It smells of old motor oil, rusted iron, and the sweet, heavy scent of mown fescue.</p>
+            <p>Above him, the stars are so thick they look like milk spilled across a black velvet cloth. He does not have a name for the ache in his chest &mdash; a strange combination of absolute insignificance and profound belonging. He only knows that he is wide open. He is beholding the Trinity without knowing the math of the creeds. He is simply there, and the Horizon is Him.</p>
+            <p class="excerpt-divider">&mdash; &#x2736; &mdash;</p>
+            <p>NOVEMBER 2009. He is forty-six, sitting in his truck in the parking garage of a hospital at 2:00 in the afternoon. The diagnosis is not his &mdash; it is his father&rsquo;s &mdash; but the weight is his. He sits in the shadows with his hands gripped so tight on the wheel his knuckles are white. He has been looking down at his own feet for so long that he has forgotten the sky exists.</p>
+            <p>Then, a man in a circle of folding metal chairs &mdash; a man with concrete-stained hands and a voice like gravel &mdash; says: <em>&ldquo;I used to know what I was aiming at. I forgot for about eight years. Then I remembered.&rdquo;</em></p>
+            <p>The man with the stone in his chest lifts his chin. Not far. Just enough to clear the fog. The Horizon is still there. Exactly where it was in 1971. It is not a line on a map; it is a Person.</p>
+            <p class="excerpt-divider">&mdash; &#x2736; &mdash;</p>
+            <p>TODAY. He is lying on his back in the bed of his own truck, on a gravel road in the North Georgia hills. Beside him lies his fourteen-year-old son. He does not know how to explain to a fourteen-year-old that the greatest battle he will ever fight is the battle for his gaze.</p>
+            <p>The Horizon has not moved an inch. The King is still on the Throne. Lift your chin.</p>
+          </div>
+        </details>
       </div>
 
       <div class="book-card">
@@ -509,6 +613,18 @@
           <a href="https://www.amazon.com/dp/B0H2Q1GGXM" target="_blank" class="btn-buy">Paperback</a>
           <a href="https://www.amazon.com/dp/B0GX32NSWW" target="_blank" class="btn-format">Kindle</a>
         </div>
+        <details class="book-excerpt">
+          <summary>Read the Prologue</summary>
+          <div class="excerpt-body">
+            <p class="excerpt-eyebrow">The First Shadow &mdash; Standing at the Edge of Everything</p>
+            <p>Imagine standing at the foot of a jagged hill on a dark, trembling afternoon outside the gates of Jerusalem. The sky has turned the color of a bruise. The air is thick with the scent of ozone and the metallic tang of blood. Above, a man hangs on a Roman cross, his breath a ragged, final prayer. But beneath the surface of that ground &mdash; hidden in the silent, dark earth of a cavity shaped like a cross &mdash; lies a skull. It is the skull of the first man, Adam.</p>
+            <p>In this singular moment, the beginning of human sin meets the end of God&rsquo;s redemption. The blood of the Last Adam drips through the cracks of the earth to wash the bones of the First Adam. The garden&rsquo;s shadow has finally fallen fully upon Golgotha, and the substance of Christ is flooding every age with light.</p>
+            <p>This is the Reconciliation Thread &mdash; a single, golden cord of Wisdom that runs from the first heartbeat in Eden to the final &ldquo;It is finished&rdquo; on the Cross, and then forward into the Resurrection, the Church, and the age to come.</p>
+            <blockquote><em>&ldquo;Which are a shadow of things to come, but the substance is of Christ.&rdquo;</em> &mdash; Colossians 2:17</blockquote>
+            <p>The Greek word for shadow here is <em>ski&aacute;</em> &mdash; the same word used when a tall tree falls across the path and cools the weary traveler. A shadow tells you something real is near. It has shape and form. But it is not the thing itself. The Old Testament is not merely a collection of dusty histories; it is a living icon. Every event, every priest, and every sacrifice was a shadow cast by the Light of the World before He stepped into time.</p>
+            <p>Read on. The shadow is already falling. The Substance is already here.</p>
+          </div>
+        </details>
       </div>
 
     </div>
